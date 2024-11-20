@@ -1,0 +1,34 @@
+# Base image
+FROM alpine:latest
+
+# Install necessary packages
+RUN apk add --no-cache \
+	bash \
+	xvfb \
+	openbox \
+	xauth \
+	xterm \
+	dbus \
+	ttf-dejavu \
+	wget \
+	curl \
+	libx11 \
+	libxrender \
+	libxext \
+	libxrandr \
+	libxcb \
+	mesa-gl \
+	glib \
+	gtk+3.0 \
+	&& mkdir -p /app
+
+# Install VS Code
+RUN wget https://update.code.visualstudio.com/latest/linux-x64/stable -O vscode.tar.gz && \
+	tar -xzf vscode.tar.gz -C /app && \
+	rm vscode.tar.gz
+
+# Set VS Code binary to PATH
+ENV PATH="/app/VSCode-linux-x64/bin:$PATH"
+
+# Start Openbox and VS Code
+CMD ["sh", "-c", "openbox & sleep 2 && code"]
