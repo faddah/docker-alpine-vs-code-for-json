@@ -19,10 +19,9 @@ RUN apk add --no-cache \
 	libx11 \
 	libxkbfile \
 	libsecret \
-	# && curl -L "https://update.code.visualstudio.com/latest/linux-alpine/stable" -o vscode.tar.gz \
 	&& curl -L "https://update.code.visualstudio.com/latest/linux-arm64/stable" -o vscode.tar.gz \
 	&& tar -xzf vscode.tar.gz -C /opt \
-	&& ln -s /opt/VSCode-linux-x64/code /usr/local/bin/code \
+	&& ln -s /opt/VSCode-linux-arm64/code /usr/local/bin/code \
 	&& rm vscode.tar.gz
 
 # Create a user and set up sudo
