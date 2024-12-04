@@ -43,4 +43,4 @@ EXPOSE 5900
 COPY start.sh /start.sh
 # RUN chmod +x /start.sh
 
-# CMD ["/start.sh"]
+# $ lsof -i :5900CMD ["/start.sh"]
