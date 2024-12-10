@@ -8,10 +8,10 @@ RUN apk update
 RUN apk add --no-cache xorg-server
 
 # Install a window manager (example: xfwm)
-RUN apk add --no-cache xfwm
+RUN apk add --no-cache xfwm4
 
 # Set the display environment variable
 ENV DISPLAY=:0
 
 # Run the window manager on container startup
-CMD ["xfwm"] 
+CMD ["xfwm4"] 
