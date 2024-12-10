@@ -40,7 +40,7 @@ USER dev
 EXPOSE 5900
 
 # Start script
-COPY start.sh /start.sh
+# COPY start.sh /start.sh
 # RUN chmod +x /start.sh
 
-# $ lsof -i :5900CMD ["/start.sh"]
+# CMD ["/start.sh"]
