@@ -1,0 +1,11 @@
+.DS_Store
+.vscode
+.vscode-test
+.vscode/*
+.vscode/settings.json
+node_modules
+dist
+build
+coverage
+yarn-error.log
+yarn-debug.log
